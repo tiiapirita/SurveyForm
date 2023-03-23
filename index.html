@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>DogFood</title>
+</head>
+<body>
+  <h1 id="title">Dog Food Survey</h1>
+  <p id="description">We want to know what kind of food does your dog mainly eat.</p>
+  
+  <form  id="survey-form" method="post">
+      
+      <fieldset>
+        <label id="name-label">Name:<input id="name" name="name" type="text" placeholder="Mikko Mallikas" required /></label>
+        <label id="email-label">Email:<input id="email" name="email" type="email" placeholder="example@info.com" required /></label>
+        <label id="number-label">Age:<input id="age" name="age" type="number" min="10" max="100" placeholder="65" required /></label>
+      </fieldset>
+
+      <fieldset>Do you have dogs?
+        <label for="yes">
+          <input id="yes" type="radio" required name="has-dogs"/> Yes
+        </label>
+        <label for="no">
+          <input id="no" type="radio" required name="has-dogs"/> No
+        </label>
+        <label>How many dogs do you have?
+          <select id="dropdown" name="dropdown">
+              <option value="">(please select)</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">more than 5</option>
+            </select>
+          </label>
+       </fieldset>
+
+       <fieldset>What does your dog eat?
+        <label for="raw"><input id="raw" type="checkbox" value="raw" /> Raw </label>
+        <label for="kibble"><input id="kibble" type="checkbox" value="kibble" /> Kibble</label>  
+         <label for="canned"><input id="canned" type="checkbox" value="canned" /> Canned</label> 
+          <label for="home-cooked"><input id="home-cooked" type="checkbox" value="home-cooked" /> Home-cooked</label> 
+        </fieldset>
+
+        <fieldset>        
+        <label for="comments">Additional Comments
+          <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Leave your comments:"></textarea>
+        </label>   
+      </fieldset>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+</body>
+</html>
